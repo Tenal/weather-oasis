@@ -1,0 +1,276 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+
+/* GENERAL STYLING STARTS HERE */
+
+html {
+    font-size: 62.5%;
+}
+
+body,
+p, 
+ul,
+h1,
+h2, 
+button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.layout {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    background-image: url(./assets/neutral.jpg);
+    background-size: cover;
+    background-position: center; 
+}
+
+
+/* NAV SECTION STARTS HERE */
+
+.layout nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-title {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.nav-button-container {
+    display: flex;
+    align-items:  center;
+}
+
+.nav-button-container div {
+    display: inline-block;
+}
+
+.nav-button-container input[type="text"] {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    height: 35px;
+    width: 200px;
+    padding: 0 10px;
+}
+
+.nav-button-container input[placeholder] {
+    font-family: inherit;
+    font-size: 1.4rem;
+}
+
+.nav-search-bar {
+    margin-right: 20px;
+}
+
+.nav-toggle {
+    position: relative;
+}
+
+.nav-toggle p {
+    position: absolute;
+    right: 8px;
+    margin-top: 5px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* toggle switch styling - I referenced W3schools for this */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(148, 148, 148);
+    transition: .5s;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 25px;
+    left: 5px;
+    bottom: 5px;
+    background-color: rgb(255, 255, 255);
+    transition: .5s;
+}
+
+input:checked + .slider {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 2px rgb(148, 148, 148);
+}
+
+input:checked + .slider::before {
+    transform: translateX(25px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round::before {
+    border-radius: 50%;
+}
+
+
+/* MAIN SECTION STARTS HERE */
+
+.main-container {
+    align-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 10px 1px;
+    border-radius: 10px;
+    width: 350px;
+    height: 210px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.main-container h2,
+.main-container p {
+    margin: 10px 0;
+}
+
+p.location-temperature {
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin: 20px 0; 
+}
+
+.opacity {
+    opacity: 40%;
+}
+
+
+/* BOTTOM SECTION STARTS HERE */
+
+.bottom-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 5px 0.5px;
+    border-radius: 10px;
+    height: 100px;
+    padding: 10px 10px;
+    font-weight: 500;
+}
+
+.bottom-container p {
+    margin: 10px 10px;
+    font-size: 1.2rem;
+}
+
+.bottom-container .title {
+    font-weight: 600;
+}
+
+.responsive-box-1, 
+.responsive-box-2 {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.responsive-box-1 div, 
+.responsive-box-2 div {
+    width: 50%;
+}
+
+.responsive-box-1, 
+.today-average, 
+.today-low {
+    border-right: 1px solid rgb(0, 0, 0);
+}
+
+
+/* ----------- MEDIA QUERIES SECTION STARTS HERE ----------- */
+
+/* BREAKPOINT 1 (minor change to nav section) */
+
+@media (max-width: 600px) {
+    /* nav section starts here */
+    .layout nav {
+        flex-direction: column;
+    }
+
+    .layout .nav-title {
+        margin-bottom: 30px;
+    }
+}
+
+/* BREAKPOINT 2 (landscape phones and down) */
+
+@media (max-width: 500px) {
+    /* bottom section starts here */
+    .bottom-container {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 200px;
+        padding: 5px 0;
+    }
+
+    .responsive-box-1 {
+        border-right: none;
+    }
+
+    .responsive-box-1, 
+    .responsive-box-2 {
+        justify-content: space-evenly;
+        width: 100%;
+    }
+}
+
+/* BREAKPOINT 3 (portrait phones and down) */
+
+@media (max-width: 380px) {
+    /* main section starts here */
+    .main-container {
+        width: 100%;
+    }
+}

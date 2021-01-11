@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Oasis</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Raleway:wght@600&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+
+    <main>
+
+        <div class="layout">
+
+        <!-- NAV SECTION STARTS HERE -->
+            <nav>
+                <h1 class="nav-title">Weather Oasis</h1>
+
+                <div class="nav-button-container">
+                    <!-- BONUS: I didn't have time to get to it this weekend, but I eventually want to add a 'location' button to allow users to populate weather data based on their longitude & latitude -->
+                    <div class="nav-search-bar">
+                        <form action="">
+                            <input type="text" placeholder="Enter a city...">
+                            <input type="submit" value="submit" class="sr-only">
+                        </form>
+                    </div>
+                    <div class="nav-toggle">
+                        <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        <p>°C / °F</p>
+                    </div>
+                </div>
+            </nav>
+
+        <!-- MAIN SECTION STARTS HERE -->
+            <section class="main-container">
+                <div>
+                    <h2 class="location-name"></h2>
+                    <p class="location-temperature"></p>
+                    <p class="location-description"></p>
+                    <p><span class="opacity">humidity: </span><span class="location-humidity"></span></p>
+                    <p><span class="opacity">wind: </span><span class="location-wind"></span></p>
+                    <!-- BONUS: I didn't have time to get to it this weekend, but I eventually want to add the icons for all of the weather ID's -->
+                </div>
+            </section>
+
+        <!-- BOTTOM SECTION STARTS HERE -->
+            <section class="bottom-container">
+                <div class="responsive-box-1">
+                    <div class="today-average">
+                        <p class="title">Feels Like</p>
+                        <p class="temperature"></p>
+                        <p class="description"></p>
+                    </div>
+                    <div class="today-high">
+                        <p class="title">Today's High</p>
+                        <p class="temperature"></p>
+                        <p class="description"></p>
+                    </div>
+                </div>
+                <div class="responsive-box-2">
+                    <div class="today-low">
+                        <p class="title">Today's Low</p>
+                        <p class="temperature"></p>
+                        <p class="description"></p>
+                    </div>
+                    <div class="tomorrow-average">
+                        <p class="title">Tomorrow</p>
+                        <p class="temperature"></p>
+                        <p class="description"></p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <script src='https://code.jquery.com/jquery-3.5.1.min.js'integrity='sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=' crossorigin='anonymous'></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
